@@ -17,3 +17,5 @@ RUN echo 'gem "fluent-plugin-gelf-hs"' >> /fluentd/Gemfile && \
     && rm -rf /var/lib/apt/lists/* \
     && gem sources --clear-all \
     && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
+
+COPY fluent.conf /fluentd/etc/
